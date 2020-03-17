@@ -17,24 +17,80 @@
   padding-right: 60px;
 }
 
+body {
+  background-color: #EEEEEE;
+}
+
+.container{
+  background: #FFF;
+  height: 270px;
+  width: 590px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 .wrapper {
-  background: #DCDCDC;
-  height: 100px;
+  background: #EEEEEE;
+  height: 140px;
   width: 500px;
+  margin-left: 55px;
+  margin-right: auto;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding-left: 15px;
+  paddin
+}
+
+.user1 {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .user2 {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: bold;
-  margin-right: 9px;
+  margin-right: 5px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .comment2 {
-  font-size: 12px;
-  margin-right: 9px;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.alinhar {
-  display: flex;
-  flex-direction: row;
+.margincomment {
+  margin-top: 30px;
 }
+
+.quest {
+  font-size: 15px;
+  font-weight: normal;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 17px;
+}
+
+.areaimg {
+  float: left;
+  margin-left: 10px;
+}
+
+.date {
+  padding-left: 15px;
+  line-height: 0.1;
+  font-size: 11px;
+  color: #9A9A9A;
+}
+

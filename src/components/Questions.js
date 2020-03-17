@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 
+
 class Questions extends React.Component {
   state = {
     posts: [
@@ -29,22 +30,24 @@ class Questions extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="center" className="container" >
         <div>
-          <div className="alinhar">
-            <img src={require("../assets/profile.png")} />
+          <div>
+            <img className="areaimg" src={require("../assets/user1.png")} />
             <div>
-              <span>Ellen Duboc</span>
+              <span className="user1" >Ellen Duboc</span>
               <br />
-              <span>16/03/2020</span>
+              <p className="date" >16/03/2020</p>
             </div>
           </div>
-          <h3>Porque o Coronavírus é um problema tão grande?</h3>
-          <div className="alinhar">
-            <img src={require("../assets/profile.png")} />
+          <p className="quest" >Porque o Coronavírus é um problema tão grande?</p>
+          <div>
+            <img className="areaimg" src={require("../assets/user1.png")} />
             <div className="wrapper" >
-              <span className="user2 ">Nara Neres</span>
-              <span className="comment2">Blá bla bla</span>
+              <div className="margincomment">
+                <span className="user2 ">Nara Neres</span>
+                <span className="comment2">O principal problema do coronavírus não é, de fato, a sua taxa de mortalidade, mas sim a sua alta taxa de transmissão, o que vai superlotar o sistema de saúde. A taxa de hospitalização do coronavírus é cerca de 20% e o número de pessoas que precisam de UTI é cerca de 5%. Por exemplo, se a Itália, mantiver o mesmo nível de transmissão da doença, no dia 24/03 terão 288000 casos de coronavírus no país. Se 5% dessas 288 mil pessoas precisarem de UTI, então serão 14400 pessoas necessitando de UTI.  </span>
+              </div>
             </div>
           </div>
         </div>
