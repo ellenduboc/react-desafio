@@ -1,30 +1,29 @@
 .header {
   background: #3b5998;
-  height: 56px; 
+  height: 56px;
 }
 
 .title {
-  color: #FFF;
+  color: #fff;
   padding-left: 20px;
   display: inline;
 }
 
 .profile {
   font-size: 17px;
-  color: #FFF;
+  color: #fff;
   display: inline;
   float: right;
   padding-right: 60px;
 }
 
 body {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 
-.container{
-  background: #FFF;
-  height: 270px;
-  width: 590px;
+.container {
+  background: #fff;
+  width: 600px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -32,6 +31,8 @@ body {
   -webkit-border-radius: 7px;
   border-radius: 7px;
   padding: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .center {
@@ -39,17 +40,15 @@ body {
   justify-content: center;
 }
 
+.comments-section {
+  display: flex;
+  flex-direction: row;
+}
+
 .wrapper {
-  background: #EEEEEE;
-  height: 140px;
-  width: 500px;
-  margin-left: 55px;
-  margin-right: auto;
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
+  background: #eeeeee;
   border-radius: 25px;
-  padding-left: 15px;
-  paddin
+  padding: 15px;
 }
 
 .user1 {
@@ -70,10 +69,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.margincomment {
-  margin-top: 30px;
-}
-
 .quest {
   font-size: 15px;
   font-weight: normal;
@@ -84,13 +79,13 @@ body {
 
 .areaimg {
   float: left;
-  margin-left: 10px;
+  height: 50px;
+  width: 50px;
 }
 
 .date {
   padding-left: 15px;
   line-height: 0.1;
   font-size: 11px;
-  color: #9A9A9A;
+  color: #9a9a9a;
 }
-
