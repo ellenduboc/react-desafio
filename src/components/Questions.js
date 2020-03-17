@@ -31,17 +31,20 @@ class Questions extends React.Component {
     return (
       <div>
         <div>
-          <div>
-            <img src={require("../assets/profile.png")} />
-            <p>Ellen Duboc</p>
-            <p>16/03/2020</p>
-          </div>
-          <h3>Porque o Coronavírus é um problema tão grande?</h3>
-          <div>
+          <div className="alinhar">
             <img src={require("../assets/profile.png")} />
             <div>
-              <h1>Nara Neres</h1>
-              <h2>Blá bla bla</h2>
+              <span>Ellen Duboc</span>
+              <br />
+              <span>16/03/2020</span>
+            </div>
+          </div>
+          <h3>Porque o Coronavírus é um problema tão grande?</h3>
+          <div className="alinhar">
+            <img src={require("../assets/profile.png")} />
+            <div className="wrapper" >
+              <span className="user2 ">Nara Neres</span>
+              <span className="comment2">Blá bla bla</span>
             </div>
           </div>
         </div>

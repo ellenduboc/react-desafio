@@ -17,6 +17,24 @@
   padding-right: 60px;
 }
 
-.user1 {
-  color: #FFF;
+.wrapper {
+  background: #DCDCDC;
+  height: 100px;
+  width: 500px;
+}
+
+.user2 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 9px;
+}
+
+.comment2 {
+  font-size: 12px;
+  margin-right: 9px;
+}
+
+.alinhar {
+  display: flex;
+  flex-direction: row;
 }
