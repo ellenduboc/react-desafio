@@ -8,58 +8,132 @@ class Questions extends React.Component {
         id: 1,
         author: {
           name: "Ellen Duboc",
-          avatar: ""
+          avatar: require("../assets/user1.png")
         },
         date: "16/03/2020",
-        content: "Porque o Coronavírus é um problema tão grande?",
+        content: "Alguém pode me explicar o que é React?",
         comments: [
           {
             id: 1,
             author: {
-              name: "Nara Neres",
-              avatar: ""
+              name: "Kaian Cotias",
+              avatar: require("../assets/user2.png")
             },
-            content: "bla bla bla"
+            content: "React é uma biblioteca JavaScript open-source criada pelo Facebook para a construção de UIs complexas e interativas tanto na Web quanto em aplicações mobile. Como o core do React é a construção de componentes de UI, ele se refere apenas ao “V” (View) na arquitetura “MVC”."
           }
         ]
-      }
+      },
+      {
+        id: 1,
+        author: {
+          name: "José Felipe",
+          avatar: require("../assets/user3.png")
+        },
+        date: "17/03/2020",
+        content: "Pessoal, quais as vantagens de utilizar React?",
+        comments: [
+          {
+            id: 1,
+            author: {
+              name: "Mario Santos",
+              avatar: require("../assets/user4.png")
+            },
+            content: "Aumento de performance da aplicação com o uso do virtual DOM."
+          },
+          {
+            id: 1,
+            author: {
+              name: "Kauê Souza",
+              avatar: require("../assets/user5.png")
+            },
+            content: "JSX torna o código fácil de ler e escrever."
+          },
+          {
+            id: 1,
+            author: {
+              name: "Ellen Duboc",
+              avatar: require("../assets/user1.png")
+            },
+            content: "Pode ser renderizado no lado do cliente ou do servidor."
+          }
+        ]
+      },
+      {
+        id: 1,
+        author: {
+          name: "Mario Santos",
+          avatar: require("../assets/user4.png")
+        },
+        date: "18/03/2020",
+        content: "Como eventos são tratados no React?",
+        comments: [
+          {
+            id: 1,
+            author: {
+              name: "Kaian Cotias",
+              avatar: require("../assets/user2.png")
+            },
+            content: "Com o propósito de resolver problemas de compatibilidade entre browsers, o manipuladores de eventos do React são passados como instâncias do SyntheticEvent, que é o meio do React contornar os eventos nativos dos browsers. O SyntheticEvent possui a mesma interface que os eventos nativos do browser, com a vantagem de ter funcionamento idêntico em todos os browsers. O interessante é que o React não anexa eventos aos nós filhos propriamente dito. Ele escuta por todos eventos a um nível mais alto usando um único listener. Isso é bom pra performance e significa que o React não precisa se preocupar em acompanhar os listeners dos eventos quando atualiza o DOM."
+          }
+        ]
+      },
+      {
+        id: 1,
+        author: {
+          name: "Kauê Souza",
+          avatar: require("../assets/user5.png")
+        },
+        date: "19/03/2020",
+        content: "Qual a diferença entre Element e Component?",
+        comments: [
+          {
+            id: 1,
+            author: {
+              name: "José Felipe",
+              avatar: require("../assets/user3.png")
+            },
+            content: "Explicando de uma maneira simples, um element descreve o que será representado na tela, é a representação da UI. O Component é uma função ou classe onde pode opcionalmente aceitar inputs e retornar um element."
+          },
+        ]
+      },
     ]
   };
 
   render() {
-    return (
-      <div className="center" className="container">
-        <div>
+
+    return this.state.posts.map(post => {
+      return (
+        <div className="center" className="container">
           <div>
-            <img className="areaimg" src={require("../assets/user1.png")} />
             <div>
-              <span className="user1">Ellen Duboc</span>
-              <br />
-              <p className="date">16/03/2020</p>
+              <img className="areaimg" src={post.author.avatar} />
+              <div>
+                <span className="user1">{post.author.name}</span>
+                <br />
+                <p className="date">{post.date}</p>
+              </div>
             </div>
-          </div>
-          <p className="quest">
-            Porque o Coronavírus é um problema tão grande?
-          </p>
-          <div className="comments-section">
-            <img className="areaimg" src={require("../assets/user1.png")} />
-            <div className="wrapper">
-              <span className="user2 ">Nara Neres</span>
-              <span className="comment2">
-                O principal problema do coronavírus não é, de fato, a sua taxa
-                de mortalidade, mas sim a sua alta taxa de transmissão, o que
-                vai superlotar o sistema de saúde. A taxa de hospitalização do
-                coronavírus é cerca de 20% e o número de pessoas que precisam de
-                UTI é cerca de 5%. Por exemplo, se a Itália, mantiver o mesmo
-                nível de transmissão da doença, no dia 24/03 terão 288000 casos
-                de coronavírus no país. Se 5% dessas 288 mil pessoas precisarem
-                de UTI, então serão 14400 pessoas necessitando de UTI.{" "}
-              </span>
-            </div>
+            <p className="quest">
+              {post.content}
+            </p>
+            {post.comments.map(comment => {
+              return (
+                <div className="comments-section">
+                  <img className="areaimg" src={comment.author.avatar} />
+                  <div className="wrapper">
+                    <span className="user2 ">{comment.author.name}</span>
+                    <span className="comment2">
+                      {comment.content}
+                    </span>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
-      </div>
-    );
+      )
+    });
+
   }
 }
 
